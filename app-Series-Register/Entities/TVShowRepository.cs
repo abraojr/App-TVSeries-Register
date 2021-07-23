@@ -1,5 +1,4 @@
 ﻿using app_Series_Register.Interfaces;
-using System;
 using System.Collections.Generic;
 
 namespace app_Series_Register
@@ -9,32 +8,32 @@ namespace app_Series_Register
         private List<TVShow> listSeries = new List<TVShow>();
         public void Delete(int id)
         {
-            throw new NotImplementedException();
+            listSeries[id].Delete();
         }
 
         public TVShow GetById(int id)
         {
-            throw new NotImplementedException();
+            return listSeries[id];
         }
 
         public void Insert(TVShow entity)
         {
-            throw new NotImplementedException();
+            listSeries.Add(entity);
         }
 
         public List<TVShow> List()
         {
-            throw new NotImplementedException();
+            return listSeries;
         }
 
         public int nextId()
         {
-            throw new NotImplementedException();
+            return listSeries.Count;
         }
 
         public void Update(int id, TVShow entity)
         {
-            throw new NotImplementedException();
+            listSeries[id] = entity;
         }
     }
 }

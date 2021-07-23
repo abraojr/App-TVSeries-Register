@@ -9,6 +9,7 @@ namespace app_Series_Register
         private string Title { get; set; }
         private string Description { get; set; }
         private int Year { get; set; }
+        private bool Deleted { get; set; }
 
 
         //Methods
@@ -19,6 +20,7 @@ namespace app_Series_Register
             this.Title = title;
             this.Description = description;
             this.Year = year;
+            this.Deleted = false;
         }
 
         public override string ToString()
@@ -27,7 +29,8 @@ namespace app_Series_Register
             callback += "Genre: " + this.Genre + Environment.NewLine;
             callback += "Title: " + this.Title + Environment.NewLine;
             callback += "Description: " + this.Description + Environment.NewLine;
-            callback += "Release Year: " + this.Genre;
+            callback += "Release Year: " + this.Year + Environment.NewLine;
+            callback += "Deleted: " + this.Deleted;
             return callback;
         }
 
@@ -39,6 +42,15 @@ namespace app_Series_Register
         public int getId()
         {
             return this.Id;
+        }
+        public bool getDeleted()
+        {
+            return this.Deleted;
+        }
+
+        public void Delete()
+        {
+            this.Deleted = true;
         }
     }
 }

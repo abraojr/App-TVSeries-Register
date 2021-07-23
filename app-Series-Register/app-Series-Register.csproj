@@ -6,8 +6,4 @@
     <RootNamespace>app_Series_Register</RootNamespace>
   </PropertyGroup>
 
-  <ItemGroup>
-    <Folder Include="Interfaces\" />
-  </ItemGroup>
-
 </Project>
